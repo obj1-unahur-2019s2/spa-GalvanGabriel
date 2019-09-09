@@ -1,8 +1,14 @@
+//Gabriel Galvan
 import personas.*
 
 object spa {
-	method atender(persona) {
-		// hay que hacer que la persona reciba masajes y se dé un baño de vapor
-		// despues, agregar el premio para el que vuelve enseguida
-	}
+    var ultimaPersona
+    method atender(persona) {
+         if (persona == ultimaPersona) {
+              persona.recibirMasajes()
+         }
+         persona.recibirMasajes()
+         persona.darseUnBanioDeVapor()
+         ultimaPersona = persona
+     }
 }
